@@ -1,7 +1,11 @@
 def fibonacci(n)
-  return n if n <= 1
-  fibonacci(n - 1) + fibonacci(n - 2)
+  a,b,c = 1,0,5
+  while a < 10000000000
+    puts "#{a}"
+    a,b,c = b,c,a+c,b+(a+c)
+  end
 end
 
-n = 10
+
+n = 50
 puts fibonacci(n)
