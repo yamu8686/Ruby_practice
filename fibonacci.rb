@@ -1,7 +1,13 @@
-@memo = { 1 => 1, 2 => 1 }
-def fibonacci(input)
-  return @memo[input] if @memo
-  @memo[input] = fibonacci(input - 2) + fibonacci(input - 1)
+def fibonacci(num)
+  if num == 0
+    return 0
+  elsif num == 1
+    return 1
+  else
+    fibonacci(num - 1) + fibonacci(num - 2)
+  end
 end
 
-fibonacci(10)
+(0..9).each do |i|
+  puts "第　#{i} 項: #{fibonacci(i)}"
+end
